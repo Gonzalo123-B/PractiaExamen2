@@ -1,6 +1,6 @@
 const {Sequelize, Model} = require("sequelize");
 
-require("dotenv").config{};
+require("dotenv").config();
 const {DB_NAME, DB_USER, DB_HOST, DB_PORT, DB_DIALECT} = process.env
 
 const sequelize = new Sequelize(DB_NAME, DB_USER,"",{

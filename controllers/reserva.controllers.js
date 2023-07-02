@@ -36,10 +36,12 @@ const ctrlReservas = {
 
             if(!reserva) {
                 throw({
-                    status: 404,
-                    message: 'no se pudo crear la reserca'
+                    status: 400,
+                    message: 'no se pudo crear la reserva'
                 })
             }
+
+            return res.json(reserva);
 
         } catch (error) {
             res.status(error.status || 500).json(error.message || "error interno del servidor");

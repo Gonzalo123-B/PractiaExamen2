@@ -21,7 +21,7 @@ const Reserva = sequelize.define("reserva", {
         type: DataTypes.DATE,
         allowNull: false
     },
-    feha_llegada:{
+    fecha_llegada:{
         type: DataTypes.DATE,
         allowNull: false
     },
@@ -31,9 +31,9 @@ const Reserva = sequelize.define("reserva", {
     },
     codigo: {
         type: DataTypes.STRING,
-        defaultValue: new Date(.getTime())
+        defaultValue: new Date().getTime()
     }
-},{
+}, {
     timestamps: false
 })
 
