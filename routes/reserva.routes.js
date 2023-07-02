@@ -1,7 +1,12 @@
 // TODO: Importar el modelo y controladores de reservas, luego vincular rutas con controladores
 
 const router = require('express').Router();
-
+const {
+    getReservas,
+    createReserva,
+    updateReserva,
+    deleteReserva
+} = require ("../controllers/reserva.controllers");
 
 // ==========================================
 //         Rutas para renderizar vistas
@@ -18,16 +23,16 @@ const router = require('express').Router();
 // ==========================================
 
 // Obtener todas las reservas
-router.get('/api/',);
+router.get('/api/', getReservas);
  
 // Crear una reserva
-router.post('/api/',);
+router.post('/api/', createReserva);
  
 // Actualizar una reserva
-router.put('/api/:id',);
+router.put('/api/:id', updateReserva);
  
 // Eliminar una reserva de forma lógica
-router.delete('/api/:id',);
+router.delete('/api/:id', deleteReserva);
 
  
  module.exports = router;
